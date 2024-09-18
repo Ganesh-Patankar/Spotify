@@ -20,7 +20,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`${folder}/`)
+    let a = await fetch(`/${folder}/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -29,7 +29,7 @@ async function getSongs(folder) {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
-           songs.push(element.href.split(`${folder}/`)[1])
+           songs.push(element.href.split(`/${folder}/`)[1])
         }
     }
 
@@ -39,7 +39,7 @@ async function getSongs(folder) {
         songUL.innerHTML = songUL.innerHTML + `<li>
         <img class="invert" src="img/music.svg" alt="" width="100px">
                             <div class="info">
-                                <div class="songname">${song.replaceAll("%20", " ")} </div>
+                                <div class="songname">${/song.replaceAll("%20", " ")} </div>
                                 
                                 
                             </div>
@@ -85,7 +85,7 @@ const playMusic = (track, pause = false) => {
         currentSong.play();
         play.src = "img/pause.svg"
     }
-    //let audio = new Audio("songs/" + track)
+    //let audio = new Audio("/songs/" + track)
 
     document.getElementById("songinfo").innerHTML = decodeURI(track)
     document.querySelector("#songtime").innerHTML = "00:00 / 00:00"
@@ -93,7 +93,7 @@ const playMusic = (track, pause = false) => {
 }
 
 async function displayalbum() {
-    let a = await fetch(`songs/`)
+    let a = await fetch(`/songs/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -103,10 +103,10 @@ async function displayalbum() {
     for (let index = 0; index < array.length; index++) {
         const e = array[index];
 
-        if (e.href.includes("songs/")) {
+        if (e.href.includes("/songs/")) {
             let folder = e.href.split("/").slice(-2)[1]
 
-            let a = await fetch(`songs/${folder}/info.json`)
+            let a = await fetch(`/songs/${folder}/info.json`)
             let response = await a.json();
             console.log(response)
             cardcontainar.innerHTML = cardcontainar.innerHTML + `<div data-folder="${folder}" class="card">
@@ -120,7 +120,7 @@ async function displayalbum() {
                             </svg>
 
                         </div>
-                        <img src="songs/${folder}/cover.jpg" alt="">
+                        <img src="/songs/${folder}/cover.jpg" alt="">
                         <h2>${response.title}</h2>
                         <p>${response.description}</p>
                     </div>`
@@ -130,7 +130,7 @@ async function displayalbum() {
     Array.from(document.getElementsByClassName("card")).forEach(e => {
         console.log(e)
         e.addEventListener("click", async item => {
-            songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`)
+            songs = await getSongs(`/songs/${item.currentTarget.dataset.folder}`)
     playMusic(songs[0])
         })
     })
@@ -141,7 +141,7 @@ async function displayalbum() {
 
 async function main() {
 
-    await getSongs("songs/punjabi")
+    await getSongs("/songs/punjabi")
     playMusic(songs[0], true)
 
     displayalbum()
