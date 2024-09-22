@@ -1,4 +1,4 @@
-console.log("lets writr some javascript");
+console.log("lets wrrrritr some javascript");
 let hamburger = document.querySelector(".hamburger")
 let cross = document.querySelector(".cross")
 let god = document.querySelector("god").getElementsByTagName("ul")
