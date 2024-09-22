@@ -1,4 +1,4 @@
-console.log("lets writr some javascript");
+console.log("leeeeeeets writr some javascript");
 let hamburger = document.querySelector(".hamburger")
 hamburger.addEventListener("click",function(){
     console.log("hamburger cliked")
