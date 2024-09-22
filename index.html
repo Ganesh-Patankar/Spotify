@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="/style2.css">
+    <style>
+
+
+:root{
+    --a:0;
+    --b:180px
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif
+}
+
+body {
+    background-color: black;
+    color:white;
+}
+
+#left {
+    width: 25vw;
+    padding: 10px;
+    
+}
+
+.right {
+    width: 75vw;
+    
+  
+    
+}
+.songname{
+    max-width: 170px;
+    min-height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.songtime {
+    padding: 0px 12px;
+    max-width: 125px;
+}
+.songinfo {
+    padding: 0px 12px;
+    width: 250px;
+    font-size: 35px;
+    display: flex;
+}
+
+.home ul li {
+    padding-top: 14px;
+    list-style: none;
+    display: flex;
+    width: 14px;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.heading {
+    padding-top: 14px;
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 13px;
+}
+
+.heading img {
+    width: 30px;
+}
+
+.liberary {
+    min-height: 76vh;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    color: grey;
+    font-size: 9px;
+    gap: 13px;
+    position: absolute;
+    bottom: 5px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.footer a {
+    color: grey;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    
+    background-color: rgb(30, 30, 32);
+    height: 82px;
+}
+
+.header>* {
+    padding: 20px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 680px;
+}
+
+.right {
+    margin: 14px 0px;
+    position: relative;
+}
+
+.spotifyPlaylist {
+    padding: 16px;
+}
+.spotifyPlaylist h1 {
+padding: 12px;
+}
+.card {
+    width: 190px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #252525;
+    position: relative;
+    transition: all .6s;
+}
+
+.card > * {
+    padding: 3px 7px;
+}
+
+.card img {
+    width: 90%;
+    object-fit: contain;
+    border-radius: 20px;
+
+}
+.card:hover{
+    background-color: rgb(82, 81, 81);
+    cursor: pointer;
+    --a:1;
+    --b:150px;
+}
+
+.cardcontainar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px;
+    margin-top: 30px;
+    max-height: 52vh;
+    overflow-y: auto;
+}
+.play {
+   
+    width: 32px;
+    height: 32px;
+    background-color: rgb(20, 122, 20);
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:var(--b);
+    right:5px;
+    opacity: var(--a);
+    transition: 1s all ease-out;
+}
+.buttons > *{
+    margin: 0px 12px;
+    
+}
+.Signup {
+    background-color: #252525;
+    color: #585555;
+    font-weight: bold;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.Signup:hover {
+    font-size: 17px;
+    color: white;
+}
+.Login {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 26px;
+    width: 85px;
+    padding: 10px;
+}
+.Login:hover {
+    font-size: 17px;
+   font-weight: bold;
+   padding: 10px 14px;
+}
+.Player{
+    padding: 12px;
+    color: aliceblue;
+    background-color: rgb(73, 82, 73);
+    width:69%;
+    min-height: 30px;
+    margin-left: 10px;
+}
+.Player {
+    position: fixed;
+    bottom: 25px;
+    border-radius: 15px;
+
+}
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}  
+.songbuttons img {
+    cursor:pointer;
+}
+.songlist {
+    padding: 15px 0px;
+    max-height: 58vh;
+    overflow-y: auto;
+    margin-bottom: 30px;
+
+}  
+.songlist .info{
+    width: 344px;
+}
+.info div {
+    word-break: break-all;
+   
+    padding: 3px;
+    padding-bottom: 0px;
+    font-size: 13px;
+
+
+}
+
+.songlist ul li {
+    list-style-type: decimal;
+    display: flex;
+    font-size: 12px;
+    padding: 10px;
+    border: 2px solid rgb(51, 76, 77);
+    margin: 20px 0px;
+    box-shadow: -6px -3px 10px rgb(63, 19, 6);
+    width: 90%;
+    border-radius: 13px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.playnow {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+}
+
+.seekbar {
+    border-radius: 10px;
+    width: 94%;
+   background-color: white;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    margin: 8px;
+    cursor: pointer;
+}
+.circle {
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+    bottom: 8px;
+    left: 0%;
+    transition: left .5s;
+}
+.abovebar {
+    justify-content: space-between;
+    display: flex;
+    padding: 0px 22px;
+    margin: 5px -15px;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+body{
+   
+    background-color: rgb(3, 3, 3);
+}
+.navbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+.cross{
+    display: none;
+       cursor: pointer;
+}
+img {
+    cursor: pointer;
+}
+.volumebox{
+    display: flex;
+justify-content: space-evenly;
+align-items: center;
+gap: 13px;
+flex-direction: column;
+}
+.volumeicon{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;cursor: pointer;
+}
+.range input {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media (max-width: 1200px) {
+            #left {
+                background-color: rgb(7, 7, 7);
+                position: absolute;
+                left: -120%;
+                transition: all .5s;
+                z-index: 1;
+                width: 353px;
+                padding: 0px;
+            }
+
+            .cross {
+                display: block;
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                cursor: pointer;
+                z-index: 1;
+            }
+
+
+            .right {
+                width: 100%;
+            }
+
+            .Player {
+                width: 90%;
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            .seekbar {
+                width: calc(100vw - 80px);
+
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .card {
+                width: 165px;
+            }
+
+            .cardcontainar {
+                margin: 0px;
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            .right {
+                margin: 0px;
+            }
+
+            .abovebar {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+            }
+
+            .songinfo,
+            .songtime {
+                width: auto;
+            }
+
+            .info div {
+                word-break: break-all;
+
+                padding-bottom: 0px;
+                font-size: 122px;
+                padding-top: 5px;
+
+            }
+
+            .playnow>img {
+                width: 25px;
+            }
+
+            .liberary {
+                min-height: 80vh;
+                position: relative;
+            }
+
+            .songname {
+                max-width: 170px;
+            }
+
+            .info div {
+                word-break: break-all;
+                padding-bottom: 0px;
+                font-size: 15px;
+            }
+            .right{
+                width:1200px;
+                height: 1500px;
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container flex bg-black">
+
+        <div id="left">
+            
+                <img class="cross" src="/img/close.svg" alt="" width="30px" height="30px">
+            
+
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="logo invert"><img width="40" src="/img/logo.svg" alt="logo"></div>
+                <ul>
+                    <li><img class="invert" src="/img/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="/img/search.svg" alt="SEARCH">Search</li>
+                </ul>
+            </div>
+            <div class="liberary bg-grey rounded m-1 p-1">
+
+                <div class="heading">
+                    <img src="/img/playlist.svg" alt="liberary" class="invert">
+                    <h2>Your library</h2>
+                </div>
+
+                <div class="songlist">
+                    <ul>
+
+                    </ul>
+
+                </div>
+                <div class="footer flex">
+
+
+
+                    <a href="https://www.spotify.com/in-en/legal/">
+                        <span>Legal</span>
+                    </a>
+
+
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy/">
+                        <span>Privacy Center</span>
+                    </a>
+
+
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                        <span>Privacy Policy</span>
+                    </a>
+
+
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                        <span>Cookies</span>
+                    </a>
+
+
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                        <span>About Ads</span>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="right bg-grey rounded">
+            <div class="header rounded ">
+                <div class="nav">
+
+                    <div class="navbuttons">
+                        <img class="hamburger" src="/img/hamburger.svg" alt="" width="40px" height="40px">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#000000" fill="none">
+                            <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#000000" fill="none">
+                            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#ffffff"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                    </div>
+                    <div class="buttons">
+                        <button class="Signup">Sign up</button>
+                        <button class="Login">Log in</button>
+                    </div>
+                </div>
+            </div>
+            <div class="spotifyPlaylist">
+                <h1>Spotify Playlists</h1>
+                <div class="cardcontainar ">
+
+                    <div class="card god">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/god/cover.jpg" alt="">
+                        <h2 class="infocard">God</h2>
+                        <p class="infocard">Best for morning</p>
+                    </div>
+                    <div class="card drive">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/drive/cover.jpg" alt="">
+                        <h2 class="infocard">Drive</h2>
+                        <p class="infocard">Drive and Chill Songs</p>
+                    </div>
+                    <div class="card haripath">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/haripath/cover.jpg" alt="">
+                        <h2 class="infocard">Haripath</h2>
+                        <p class="infocard">Dyaneshwar Maharaj Haripath</p>
+                    </div>
+
+
+                    <div class="card hindi">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/hindi/cover.jpg" alt="">
+                        <h2 class="infocard">Hindi</h2>
+                        <p class="infocard">Best hindi Songs</p>
+                    </div>
+                    <div class="card lofi">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/lofi/cover.jpg" alt="">
+                        <h2 class="infocard">Lofi</h2>
+                        <p class="infocard">Trending Lofi Songs</p>
+                    </div>
+                    <div class="card marathi">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/marathi/cover.jpg" alt="">
+                        <h2 class="infocard">Marathi</h2>
+                        <p class="infocard">Top Marathi Hits</p>
+                    </div>
+
+
+
+
+                    <div class="card party">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/party/cover.jpg" alt="">
+                        <h2 class="infocard">Party</h2>
+                        <p class="infocard">Night Party</p>
+                    </div>
+                    <div class="card punjabi">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/punjabi/cover.jpg" alt="">
+                        <h2 class="infocard">Panjabi</h2>
+                        <p class="infocard">Aura of punjab</p>
+                    </div>
+                    <div class="card rap">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/rap/cover.jpg" alt="">
+                        <h2 class="infocard">Raps</h2>
+                        <p class="infocard">Top Globle raps</p>
+                    </div>
+                    <div class="card sleep">
+                        <div class="play">
+                            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Circular background -->
+                                <circle cx="50" cy="50" r="50" fill="green" />
+
+                                <!-- Play button -->
+                                <polygon points="35,30 35,70 75,50" fill="black" />
+                            </svg>
+
+                        </div>
+                        <img src="/Songs/sleep/cover.jpg" alt="">
+                        <h2 class="infocard">Sleep</h2>
+                        <p class="infocard">Piecefull and Chill Songs</p>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+            <div class="Player">
+    <div class="seekbar">
+        <div class="circle">
+
+        </div>
+    </div>
+
+                <div class="abovebar">
+                    <div id="songinfo">
+                        dj song
+                    </div>
+                    <div class="songbuttons invert">
+                        <img id="previous" src="/img/previous.svg" alt="">
+                        <img id="play" src="/img/play.svg" alt="">
+                        <img id="next" src="/img/next.svg" alt="">
+                    </div>
+
+                    <div class="volumebox">
+                        <div id="songtime">
+                            00/00/00/00/00
+                        </div>
+                        <div class="volumeicon">
+                            <img src="/img/volume.svg" alt="" width="30">
+                            <div class="range">
+                                <input class="invert" type="range" name="volume" id="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
