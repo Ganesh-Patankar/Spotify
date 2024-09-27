@@ -1,0 +1,359 @@
+.opneclose{
+    z-index: 10;
+}
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+.massage{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(90, 84, 84);
+    border-radius: 50PX;
+    box-shadow: 0px 0px 50px rgba(170, 160, 160, 0.1);
+    position: absolute; 
+    border: 0;
+    display: block;
+    position: absolute;
+    padding-left: 50px;
+    left: 30%;
+    top: 40px;
+ 
+   
+}
+.popup {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(49, 47, 47);
+    border-radius: 50PX;
+  display: none;
+    box-shadow: 0px 0px 50px rgba(153, 149, 149, 0.9);
+    position: absolute;
+    
+    left: 30%;
+    top: 40px;
+    z-index: 10;
+}
+h1{
+    margin: 0;
+    padding: 0;
+    font-size: 55px;
+    margin-left: 155px;
+
+}
+#p{
+    
+    margin: 0;
+    padding: 0;
+    font-size: 55px;
+    color: white;
+    margin-left: 85px;
+}
+#ganesh {
+    color: white;
+    font-size: 35px;
+}
+.text {
+    margin: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    width: 500px;
+}
+.input > input{
+    font-size: 29px;
+    background-color: rgb(61, 51, 43);
+    border-radius: 25px;
+    height: 45px;
+    width: 350px;
+   color: rgb(211, 208, 208);
+    font-weight: 600;
+    box-shadow: 1px 1px 10px rgb(139, 130, 130);
+    border: none;
+}
+.input > #button {
+    position: absolute;
+    font-size: 20px;
+    background-color: rgb(61, 51, 43);
+    border-radius: 25px;
+    height: 35px;
+    width: 80px;
+    color: rgb(211, 208, 208);
+    font-weight: 600;
+    box-shadow: 1px 1px 10px rgb(139, 130, 130);
+    bottom: -55px;
+    right: 40px;
+    border: none;
+}
+.username{
+    margin: 0;
+    padding: 0;
+    color: rgb(180, 172, 172);
+    margin-left: 100px;
+    font-size: 23px;
+}
+#msg{
+    position: absolute;
+    color: rgb(233, 232, 232);
+    font-size: 105px;
+    top: 10px;
+    padding: 0;
+    margin: 0;
+    
+}
+#submsg{
+    top: 360px;
+    position: absolute;
+    color: rgb(218, 214, 214);
+    font-size: 25px;
+    bottom: 100px;
+    width: 100%;
+    left: 10px;
+}
+.feedback {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    background-color: rgb(24, 23, 23);
+    border-radius: 30PX;
+    box-shadow: 0px 0px 50px rgba(170, 160, 160, 0.9);
+    position: absolute; 
+    border: 0;
+    top: 80px;
+   display: block;
+   position: absolute;
+    
+   left: 30%;
+  
+}
+.stars {
+    
+    height: 80px;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.rateus{
+    display: flex;
+    padding: 0;
+    margin: -20px;
+    margin-top: 1px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+   display: block;
+    position: relative;
+}
+#description{
+width: 340px;
+height: 100px;
+background-color: rgb(24, 24, 13);
+color: white;
+font-style: italic;
+border-radius: 10px;
+font-size: 15px;
+margin-left: 70px;
+}
+#desbutton {
+    position: absolute;
+    width: 64px;
+height: 20px;
+background-color: rgb(24, 24, 13);
+color: rgb(168, 165, 165);
+font-style: italic;
+border-radius: 10px;
+font-size: 15px;
+bottom: -30px;
+right: 55px;
+}
+#getname{
+    display: none;
+}
+#getrating{
+    display: none;
+}
+
+@media (max-width:1000px)  {
+
+    .popup{
+        display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 580px;
+    background-color: rgb(49, 47, 47);
+    border-radius: 50PX;
+  display: none;
+    box-shadow: 0px 0px 50px rgba(153, 149, 149, 0.9);
+    position: absolute;
+    
+    left: 10%;
+    top: 40px;
+    z-index: 10;
+    }
+    
+    h1{
+        margin: 0;
+        padding: 0;
+        font-size: 55px;
+        margin-left: 65px;
+    
+    }
+    #p{
+        
+        margin: 0;
+        padding: 0;
+        font-size: 55px;
+        color: white;
+        margin-left: 10px;
+    }
+    #ganesh {
+        margin-top: 50px;
+        color: white;
+        font-size: 30px;
+    }
+    .username{
+        margin: 0;
+        padding: 0;
+        color: rgb(180, 172, 172);
+        margin-left: 10px;
+        font-size: 23px;
+        margin-top: 35px;
+    }
+.input > #name{
+    position: relative;
+    font-size: 29px;
+    background-color: rgb(61, 51, 43);
+    border-radius: 25px;
+    height: 45px;
+    width: 270px;
+   color: rgb(211, 208, 208);
+    font-weight: 600;
+    box-shadow: 1px 1px 10px rgb(139, 130, 130);
+    border: none;
+    left: -80px;
+    top: 50px;
+}
+.input > #button {
+    position: absolute;
+    font-size: 20px;
+    background-color: rgb(61, 51, 43);
+    border-radius: 25px;
+    height: 35px;
+    width: 80px;
+    color: rgb(211, 208, 208);
+    font-weight: 600;
+    box-shadow: 1px 1px 10px rgb(139, 130, 130);
+    bottom: -55px;
+   left: 230px;
+   top: 130px;
+    border: none;
+}
+
+.massage{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 480px;
+    background-color: rgb(3, 3, 3);
+    border-radius: 50PX;
+  display: none;
+    box-shadow: 0px 0px 50px rgba(153, 149, 149, 0.9);
+    position: absolute;
+    
+    left: 10%;
+    top: 100px;
+    z-index: 10;
+ 
+   
+}
+#msg{
+    position: absolute;
+    color: rgb(233, 232, 232);
+    font-size: 75px;
+    top: 100px;
+    padding: 0;
+    margin: 0;
+    
+}
+.feedback {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+padding-top: 100px;
+    height: 270px;
+    background-color: rgb(24, 23, 23);
+    border-radius: 30PX;
+    box-shadow: 0px 0px 50px rgba(170, 160, 160, 0.9);
+    position: absolute; 
+    border: 0;
+    top: 280px;
+   display: none;
+   position: absolute;
+    
+   left: 10%;
+  
+}
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+   display: none;
+    position: relative;
+    left: -45px;
+
+}
+#description{
+    width: 300px;
+    height: 100px;
+    background-color: rgb(24, 24, 13);
+    color: white;
+    font-style: italic;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-left: 70px;
+    }
+    #desbutton {
+        position: absolute;
+        width: 64px;
+    height: 20px;
+    background-color: rgb(24, 24, 13);
+    color: rgb(168, 165, 165);
+    font-style: italic;
+    border-radius: 10px;
+    font-size: 15px;
+    bottom: -30px;
+    right: 0px;
+    }
+
+}
