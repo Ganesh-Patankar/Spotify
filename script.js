@@ -22,6 +22,11 @@ document.querySelector("#button").addEventListener("click", function() {
     
 document.querySelector("#msg").innerHTML = `&nbsp;&nbsp;&nbsp;"Hii <br> &nbsp;&nbsp;User"`
 }
+else if (namevalue == "suraj"||"Suraj"|| "SURAJ"|| "Suraj Chavan"|| "Suraj chavan"){
+    document.querySelector("#msg").innerHTML = `&nbsp;&nbsp;&nbsp;"Hii <br> &nbsp;&nbsp;<i>SQ RQ ZQ</i>"` 
+let songsuraj = document.querySelector("#suraj")
+    songsuraj.play();
+}
 else {
     document.querySelector("#msg").innerHTML = `&nbsp;&nbsp;&nbsp;"Hii <br> &nbsp;&nbsp;${namevalue}"`
 }
