@@ -3,6 +3,7 @@
     --b: 180px
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +30,7 @@ body {
     position: relative;
     width: 75vw;
     display: inline-block;
-    top: -10px;
+    top: 10px;
 
 
 }
@@ -165,7 +166,7 @@ body {
     gap: 15px;
     margin: 20px;
     margin-top: 30px;
-    max-height: 55vh;
+    max-height: 52vh;
     overflow-y: auto;
 }
 

@@ -278,4 +278,8 @@ god.addEventListener("click", function () {
   song4.addEventListener("click", function () {
       console.log("song4played cliked")
 
-  })*/
+  })
+      (namevalue == "suraj"||"Suraj"|| "SURAJ"|| "Suraj Chavan"|| "Suraj chavan"){
+        document.querySelector("#msg").innerHTML = `&nbsp;&nbsp;&nbsp;"Hii <br> &nbsp;&nbsp;<i>SQ RQ ZQ</i>"` 
+    let songsuraj = document.querySelector("#suraj")
+        songsuraj.play();*/
