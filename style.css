@@ -215,6 +215,7 @@ right: 55px;
     position: absolute;
     margin-left: 5vh;
     top: 40px;
+    left: 2px;
     z-index: 10;
     }
     
@@ -280,14 +281,14 @@ right: 55px;
     display: inline-block;
     justify-content: center;
     align-items: center;
-    width: 90vw;
+    width: 80vw;
     height: 480px;
     background-color: rgb(3, 3, 3);
     border-radius: 50PX;
   display: none;
     box-shadow: 0px 0px 50px rgba(153, 149, 149, 0.9);
     position: absolute;
-    margin-left: 5vh;
+   left: 2px;
     top: 100px;
     z-index: 10;
  
@@ -315,6 +316,7 @@ padding-top: 100px;
     position: absolute; 
     border: 0;
     top: 180px;
+    left: 2px;
    display: none;
    position: absolute;
     margin-left: 5vh;
