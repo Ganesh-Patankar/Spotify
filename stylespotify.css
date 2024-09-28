@@ -30,13 +30,13 @@ body {
     position: relative;
     width: 75vw;
     display: inline-block;
-    top: 35px;
+    top: 25px;
 
 
 }
 
 .songname {
-    max-width: 170px;
+    max-width: 140px;
     min-height: 50px;
     justify-content: center;
     align-items: center;
@@ -47,10 +47,10 @@ body {
     max-width: 125px;
 }
 
-.songinfo {
+#songinfo {
     padding: 0px 12px;
-    width: 250px;
-    font-size: 35px;
+    max-width: 250px;
+    font-size: 20px;
     display: flex;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .liberary {
-    min-height: 70vh;
+    min-height: 74vh;
     position: relative;
 
 }
@@ -166,7 +166,7 @@ body {
     gap: 15px;
     margin: 20px;
     margin-top: 30px;
-    max-height: 56vh;
+    max-height: 52vh;
     overflow-y: auto;
 }
 
@@ -381,6 +381,12 @@ img {
 #play {
     display: block;
 }
+.drivesong {
+    display: none;
+}
+.haripathsong {
+    display: none;
+}
 
 
 
@@ -479,6 +485,12 @@ img {
     .songinfo,
     .songtime {
         width: auto;
+    }
+    #songinfo {
+        padding: 0px 12px;
+        max-width: 250px;
+        font-size: 20px;
+        display: flex;
     }
 
     .info div {
