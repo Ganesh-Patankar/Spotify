@@ -30,7 +30,7 @@ body {
     position: relative;
     width: 75vw;
     display: inline-block;
-    top: -30px;
+    top: -10px;
 
 
 }
@@ -166,7 +166,7 @@ body {
     gap: 15px;
     margin: 20px;
     margin-top: 30px;
-    max-height: 60vh;
+    max-height: 55vh;
     overflow-y: auto;
 }
 
