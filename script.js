@@ -7,6 +7,11 @@ window.onload = function () {
     document.querySelector(".popup").style.display = "block"
     document.querySelector(".massage").style.display = "none"
 }
+window.onbeforeunload = function (){
+    document.querySelector(".feedback").style.display = "block";
+}
+
+
 //gettin name of user and end of popupscreen
 let username = document.querySelector("#name");
 
@@ -41,7 +46,7 @@ document.querySelector("#button").addEventListener("click", function () {
     //popup rating screen
     setTimeout(function () {
         document.querySelector(".feedback").style.display = "block";
-    }, 60000);
+    }, 160000);
 
     //reting screen content and open description box
 
