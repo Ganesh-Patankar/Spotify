@@ -7,8 +7,7 @@ $dbname = "spotify reviews";
 $conn = mysqli_connect ($host, $username, $password, $dbname);
 if(!$conn){
     echo "connection fail" . mysqli_connect_error();
-    exit;
-}
+    exit;}
 $name =$_POST["username"];
 $ratting =$_POST["rating"];
 $description =$_POST["Feedbackdescription"];
