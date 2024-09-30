@@ -1,4 +1,4 @@
-console.log("lets write some javascript")
+console.log("lets write some 30 javascript")
 
 //popup load
 
