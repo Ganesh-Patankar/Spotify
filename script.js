@@ -1,4 +1,4 @@
-console.log("lets write some 30 javascript")
+console.log("lets write some  1oct javascript")
 
 //popup load
 
@@ -116,7 +116,7 @@ document.querySelector("#button").addEventListener("click", function () {
     let submit = document.querySelector("#desbutton")
     submit.addEventListener("click", function () {
         document.querySelector(".feedback").style.display = "none";
-        document.querySelector(".welcomeandretting").style.display = "none";
+       
 
     })
 
