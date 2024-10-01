@@ -17,9 +17,9 @@ if(!$conn){
     echo "connection fail" . mysqli_connect_error();
     exit;
 }
-$name =$_POST["username"];
-$ratting =$_POST["rating"];
-$description =$_POST["Feedbackdescription"];
+$name =$_GET["username"];
+$ratting =$_GET["rating"];
+$description =$_GET["Feedbackdescription"];
     
     $sqlquery = "INSERT INTO reviews (name, rating, description) VALUES ('$name', '$ratting', '$description')";
     

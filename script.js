@@ -1,4 +1,4 @@
-console.log("lets write some  1oct javascript")
+console.log("lets write some  1oct 2nd try javascript")
 
 //popup load
 
@@ -8,6 +8,7 @@ window.onload = function () {
     document.querySelector(".massage").style.display = "none"
 }
 window.onbeforeunload = function (){
+    console.log("realoading")
     document.querySelector(".feedback").style.display = "block";
 }
 
