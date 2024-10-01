@@ -7,10 +7,7 @@ window.onload = function () {
     document.querySelector(".popup").style.display = "block"
     document.querySelector(".massage").style.display = "none"
 }
-window.onbeforeunload = function (){
-    console.log("realoading")
-    document.querySelector(".feedback").style.display = "block";
-}
+
 
 
 //gettin name of user and end of popupscreen
